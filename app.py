@@ -23,7 +23,7 @@ def peeps():
 
     return body, 200
 
-@app.route("/json")
+@app.route("/json", methods=["GET", "POST"])
 def another():
     content = {
         "name": "depression",
@@ -31,7 +31,7 @@ def another():
     }
 
     response = jsonify(content)
-    return content["name"]
+    return content["age"]
 
 
 
